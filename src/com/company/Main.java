@@ -21,12 +21,13 @@ public class Main {
                 if(!stackBracket.empty()) {
                     bracketBuilder.append(stackBracket.pop());
                     count++;
-                    if (i+1 == brackets.length() || brackets.charAt(i + 1) == '(') {
-                        for (int j = 0; j < count; j++) {
-                            bracketBuilder.append(')');
-                        }
-                        count = 0;
+                }
+                if (i+1 == brackets.length()
+                    || brackets.charAt(i + 1) == '(') {
+                    for (int j = 0; j < count; j++) {
+                        bracketBuilder.append(')');
                     }
+                    count = 0;
                 }
             }
         }
